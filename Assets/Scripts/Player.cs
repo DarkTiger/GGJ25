@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,7 +13,7 @@ public class Player : MonoBehaviour
     float baseMaxSpeed = 1f;
     float currentDashTime = 0f;
     float currentDashCooldown = 0f;
-
+    Vector2 moveValue = Vector2.zero;
     PlayerInput playerInput = null;
     InputAction moveAction = null;
     InputAction jumpAction = null;
@@ -34,7 +33,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+        moveValue = moveAction.ReadValue<Vector2>();
+        moveValue = moveValue.magnitude > 0.1f ? moveValue : Vector2.zero;
 
         if (moveValue.magnitude > 0.1f)
         {
@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
         currentDashCooldown -= Time.deltaTime;
 
         Dash();
+
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -58.5f, 58.5f), Mathf.Clamp(transform.position.y, -38.5f, 38.5f), transform.position.z);
     }
 
     void Dash()
@@ -63,7 +65,7 @@ public class Player : MonoBehaviour
 
         while (currentDashTime < dashTime)
         {
-            rb.AddForce(rb.linearVelocity.normalized * dashForce, ForceMode.Force);
+            rb.AddForce(moveValue.normalized * dashForce, ForceMode.Force);
             currentDashTime += Time.deltaTime;
             maxSpeed = maxSpeedDash;
             yield return null;
