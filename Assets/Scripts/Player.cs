@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float dashForce = 5f;
     [SerializeField] float dashTime = 0.25f;
     [SerializeField] float dashCooldown = 5f;
+    [SerializeField] Vector2 playerMovementBorder = new Vector2(58.5f, 38.5f);
     [SerializeField] Transform shapesParent = null; 
 
     public ShapeType CurrentShapeIndex { get; private set; } = 0;
@@ -27,7 +28,6 @@ public class Player : MonoBehaviour
     InputAction moveAction = null;
     InputAction jumpAction = null;
     Rigidbody rb = null;
-
 
 
     private void Awake()
@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
             rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
         }
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -58.5f, 58.5f), Mathf.Clamp(transform.position.y, -38.5f, 38.5f), transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -playerMovementBorder.x, playerMovementBorder.x), Mathf.Clamp(transform.position.y, -playerMovementBorder.y, playerMovementBorder.y), transform.position.z);
     }
 
     void Dash()
