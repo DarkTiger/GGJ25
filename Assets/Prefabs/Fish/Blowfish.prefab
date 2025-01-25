@@ -32,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7995344428035718133}
+  - {fileID: 4202220446821013149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8262283945593214814
@@ -93,12 +93,14 @@ MonoBehaviour:
   RightMovementIntensity: 3
   PatternIntensity: 5
   PatternDurationTime: 1
+  ShouldRotateAlongPath: 1
+  RotationIntensity: 1
   DangerZone: {fileID: 9128423765978893768}
   HitBox: {fileID: 3193864827511086561}
   InflationSpeed: 1
   IsInflated: 0
   InitialHitBoxRadius: 0.1
-  Animator: {fileID: 4041144701393985935}
+  Animator: {fileID: 0}
 --- !u!135 &9128423765978893768
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -141,7 +143,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: -0.2, z: 0}
---- !u!1001 &7601955328192338974
+--- !u!1001 &4457420440022495606
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -159,64 +161,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.48537552
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.12876229
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.855844
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.12394309
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_Name
-      value: sk_Blowfish_Big
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: c5d422510f426654cb88d34cb3134759, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: Blowfish_Big
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dfda51c8be1eac3499ae455f9a8c0a56, type: 2}
-    - target: {fileID: 8743813690021804245, guid: c5d422510f426654cb88d34cb3134759, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 97bb47db3786b614b9a034d09595dc88, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d422510f426654cb88d34cb3134759, type: 3}
---- !u!95 &4041144701393985935 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: c5d422510f426654cb88d34cb3134759, type: 3}
-  m_PrefabInstance: {fileID: 7601955328192338974}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7995344428035718133 stripped
+--- !u!4 &4202220446821013149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
-  m_PrefabInstance: {fileID: 7601955328192338974}
+  m_PrefabInstance: {fileID: 4457420440022495606}
   m_PrefabAsset: {fileID: 0}
