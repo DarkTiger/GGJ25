@@ -424,20 +424,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "446b87895bf546edac93f1c480851ddb"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "d9a5c5e7db934b20bd9f1cd01b7a2ab9"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "447fad269be6460f95552c405b2034b0"
                 },
                 "m_SlotId": 2
@@ -1324,8 +1310,8 @@
     "m_ObjectId": "104cd28d4a6c42e3bca11826fd81da6d",
     "m_Title": "Normali",
     "m_Position": {
-        "x": -1713.600341796875,
-        "y": -288.8000183105469
+        "x": -1713.5999755859375,
+        "y": -288.79998779296877
     }
 }
 
@@ -1335,8 +1321,8 @@
     "m_ObjectId": "105bddbe2dad4577b4627fd5db30351b",
     "m_Title": "Fresnel dissolve",
     "m_Position": {
-        "x": -1092.0,
-        "y": 2343.199951171875
+        "x": -1091.9998779296875,
+        "y": 2343.200439453125
     }
 }
 
@@ -3714,8 +3700,8 @@
     "m_ObjectId": "7ab26c1c45514fd0b8ef82b5627413da",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -1894.4002685546875,
-        "y": 1726.39990234375
+        "x": -1894.4000244140625,
+        "y": 1726.3997802734375
     }
 }
 

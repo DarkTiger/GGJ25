@@ -55,7 +55,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97bb47db3786b614b9a034d09595dc88, type: 2}
+  - {fileID: 2100000, guid: d9833e0a01d4bf140b1559b18cb59a46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,10 +187,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2748342853549002799}
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.035277512, y: -1.1418934e-13, z: -0.00000008410804, w: 0.99937755}
   m_LocalPosition: {x: -8.460084e-17, y: 0.013285375, z: 9.313225e-11}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.6323366, y: -3.02, z: -13.606918}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_ConstrainProportionsScale: 1
+>>>>>>> Stashed changes
   m_Children:
   - {fileID: 7526227340543786178}
   m_Father: {fileID: 8231262832099463602}
