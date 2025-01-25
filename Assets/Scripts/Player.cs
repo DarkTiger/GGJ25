@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
         if (moveValue.magnitude > 0.1f)
         {
-            rb.AddForce(moveValue.x * speed, 0f, moveValue.y * speed);
+            rb.AddForce(moveValue.x * speed, moveValue.y * speed, 0f);
             rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
         }       
     }
