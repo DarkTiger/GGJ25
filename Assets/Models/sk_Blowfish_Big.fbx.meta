@@ -63,7 +63,7 @@ ModelImporter:
       name: Normal
       takeName: Armature|ArmatureAction
       internalID: -2674958278859614444
-      firstFrame: 44
+      firstFrame: 45
       lastFrame: 88
       wrapMode: 0
       orientationOffsetY: 0
@@ -155,7 +155,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
