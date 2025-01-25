@@ -19,8 +19,12 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Vector2 moveValue = moveAction.ReadValue<Vector2>() * speed;
-        rb.AddForce(moveValue.x, 0f, moveValue.y);
-        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
+        Vector2 moveValue = moveAction.ReadValue<Vector2>();
+
+        if (moveValue.magnitude > 0.1f)
+        {
+            rb.AddForce(moveValue.x * speed, 0f, moveValue.y * speed);
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
+        }       
     }
 }
