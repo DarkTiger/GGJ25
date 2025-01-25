@@ -153,5 +153,65 @@ MonoBehaviour:
   speed: 25
   cameraDistance: 60
   mapSize: {x: 120, y: 100}
-  bordersSize: {x: 20, y: 20.5}
+  bordersSize: {x: 22, y: 22.5}
   player: {fileID: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.3832406
+      outSlope: 0.3832406
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.25376508
+      value: 1.0972531
+      inSlope: 0.3832406
+      outSlope: -5.3484373
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.89443797
+    - serializedVersion: 3
+      time: 0.32037014
+      value: 0.7410201
+      inSlope: -5.3484373
+      outSlope: 1.0016686
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5076278
+      value: 0.9285902
+      inSlope: 1.0016686
+      outSlope: 0.8371786
+      tangentMode: 69
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6388001
+      value: 1.0384048
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.10632567
+      outSlope: -0.10632567
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
