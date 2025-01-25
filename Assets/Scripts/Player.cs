@@ -10,6 +10,12 @@ public class Player : MonoBehaviour
     [SerializeField] float dashForce = 5f;
     [SerializeField] float dashTime = 0.25f;
     [SerializeField] float dashCooldown = 5f;
+
+    public ShapeType CurrentShapeIndex { get; private set; } = 0;
+    public int CurrentSpheresCount { get; private set; } = 0;
+    public int CurrentCubesCount { get; private set; } = 0;
+    public int CurrentPiramidsCount { get; private set; } = 0;
+
     float baseMaxSpeed = 1f;
     float currentDashTime = 0f;
     float currentDashCooldown = 0f;
@@ -18,6 +24,7 @@ public class Player : MonoBehaviour
     InputAction moveAction = null;
     InputAction jumpAction = null;
     Rigidbody rb = null;
+
 
 
     private void Awake()
@@ -33,6 +40,12 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Movement();
+        Dash();  
+    }
+
+    void Movement()
+    {
         moveValue = moveAction.ReadValue<Vector2>();
         moveValue = moveValue.magnitude > 0.1f ? moveValue : Vector2.zero;
 
@@ -42,15 +55,13 @@ public class Player : MonoBehaviour
             rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
         }
 
-        currentDashCooldown -= Time.deltaTime;
-
-        Dash();
-
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -58.5f, 58.5f), Mathf.Clamp(transform.position.y, -38.5f, 38.5f), transform.position.z);
     }
 
     void Dash()
     {
+        currentDashCooldown -= Time.deltaTime;
+
         if (currentDashCooldown > 0f) return;
 
         if (jumpAction.WasPerformedThisFrame())
@@ -73,5 +84,43 @@ public class Player : MonoBehaviour
 
         maxSpeed = baseMaxSpeed;
         currentDashTime = 0f;
+    }
+
+    public void ChangeShape(ShapeType shapeIndex)
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).gameObject.SetActive((int)shapeIndex == i);
+            CurrentShapeIndex = shapeIndex;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ShapeChanger"))
+        {
+            ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
+            GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Bubble"))
+        {
+            switch (other.GetComponent<Bubble>().ShapeIndex)
+            {
+                case ShapeType.Sphere:
+                    CurrentSpheresCount++;
+                    break;
+                case ShapeType.Cube:
+                    CurrentCubesCount++;
+                    break;
+                case ShapeType.Piramid:
+                    CurrentPiramidsCount++;
+                    break;
+            }
+
+            GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
+            Destroy(other.gameObject);
+        }
     }
 }
