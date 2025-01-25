@@ -47,8 +47,9 @@ public class Blowfish : Fish
         }
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         ResizeHitBox();
     }
 
