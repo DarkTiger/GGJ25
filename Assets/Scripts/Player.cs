@@ -12,9 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] float dashCooldown = 5f;
 
     public ShapeType CurrentShapeIndex { get; private set; } = 0;
-    public int CurrentSpheresCount { get; private set; } = 0;
-    public int CurrentCubesCount { get; private set; } = 0;
-    public int CurrentPiramidsCount { get; private set; } = 0;
+    public int CurrentSpheresCount { get; set; } = 0;
+    public int CurrentCubesCount { get; set; } = 0;
+    public int CurrentPiramidsCount { get; set; } = 0;
 
     float baseMaxSpeed = 1f;
     float currentDashTime = 0f;
@@ -99,24 +99,39 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("ShapeChanger"))
         {
-            ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
-            GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
+            if (other.GetComponent<Bonus_ShapeChanger>().ShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType)
+            {
+                GameManager.Instance.Error();
+            }
+            else
+            {
+                ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
+                GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
+            }
+                        
             Destroy(other.gameObject);
         }
 
         if (other.CompareTag("Bubble"))
         {
-            switch (other.GetComponent<Bubble>().ShapeIndex)
+            if (CurrentShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType)
+            {GameManager.Instance.Error();
+                
+            }
+            else
             {
-                case ShapeType.Sphere:
-                    CurrentSpheresCount++;
-                    break;
-                case ShapeType.Cube:
-                    CurrentCubesCount++;
-                    break;
-                case ShapeType.Piramid:
-                    CurrentPiramidsCount++;
-                    break;
+                switch (other.GetComponent<Bubble>().ShapeIndex)
+                {
+                    case ShapeType.Sphere:
+                        CurrentSpheresCount++;
+                        break;
+                    case ShapeType.Cube:
+                        CurrentCubesCount++;
+                        break;
+                    case ShapeType.Piramid:
+                        CurrentPiramidsCount++;
+                        break;
+                }
             }
 
             GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);

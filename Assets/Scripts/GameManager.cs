@@ -53,17 +53,25 @@ public class GameManager : MonoBehaviour
 
     void ShapeFinish()
     {
+        Debug.Log("SHAPE COMPLETED!");
+
         Scores += 150;
         HUD.Instance.SetPoints(Scores);
 
         NewShape();
     }
 
+    public void Error()
+    {
+        Debug.Log("ERROR!");
+        Scores = Mathf.Clamp(Scores - 50, 0, 99999);
+    }
+
     public void OnPlayerChanged(ShapeType playerShapeIndex, int currentPlayerSphere, int currentPlayerCubes, int currentPlayerPiramid)
     {
         Debug.Log(playerShapeIndex.ToString() + " sphere: " + currentPlayerSphere + " cube: " + currentPlayerCubes + " piramid: " + currentPlayerPiramid);
 
-        if (CurrentShapeData.PlayerShapeType == playerShapeIndex && 
+        if (CurrentShapeData.PlayerShapeType == playerShapeIndex &&
             CurrentShapeData.SpheresCount == currentPlayerSphere &&
             CurrentShapeData.CubesCount == currentPlayerCubes &&
             CurrentShapeData.PiramidsCount == currentPlayerPiramid)
