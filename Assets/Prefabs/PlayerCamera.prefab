@@ -67,7 +67,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 55
+  far clip plane: 100
   field of view: 23
   orthographic: 0
   orthographic size: 5
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
-  cameraHeight: 50
+  cameraDistance: 60
   mapSize: {x: 120, y: 100}
   bordersSize: {x: 20, y: 20.5}
   player: {fileID: 0}
