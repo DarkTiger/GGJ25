@@ -72,7 +72,7 @@ public class Blowfish : Fish
         IsInflated = true;
         DangerZone.enabled = true;
 
-        // TODO: Add animation
+        Animator.SetBool("isInflated", true);
     }
 
 
@@ -92,6 +92,8 @@ public class Blowfish : Fish
         if (!IsInflated) return;
         IsInflated = false;
         DangerZone.enabled = false;
+
+        Animator.SetBool("isInflated", false);
     }
 
     void OnTriggerExit(Collider other)

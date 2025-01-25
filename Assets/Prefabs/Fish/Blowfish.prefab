@@ -90,7 +90,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
+  m_Radius: 3.5
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!135 &3193864827511086561
 SphereCollider:
@@ -111,7 +111,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.29
+  m_Radius: 2
   m_Center: {x: 0, y: -0.2, z: 0}
 --- !u!1001 &7601955328192338974
 PrefabInstance:
@@ -169,6 +169,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: c5d422510f426654cb88d34cb3134759, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dfda51c8be1eac3499ae455f9a8c0a56, type: 2}
     - target: {fileID: 8743813690021804245, guid: c5d422510f426654cb88d34cb3134759, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
