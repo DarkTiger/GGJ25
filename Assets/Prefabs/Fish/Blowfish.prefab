@@ -90,6 +90,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  RightMovementIntensity: 3
   PatternIntensity: 5
   PatternDurationTime: 1
   DangerZone: {fileID: 9128423765978893768}
