@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
     public float GameTime => currentGameTime;
     public ShapeData CurrentShapeData { get; private set; }
+    public int CurrentShapeIndex = 0;
 
     [Serializable]
     public struct ShapeData
@@ -47,14 +48,20 @@ public class GameManager : MonoBehaviour
     public void NewShape()
     {
         int newShapeIndex = Random.Range(0, ShapesData.Length);
+        CurrentShapeIndex = newShapeIndex;
         CurrentShapeData = ShapesData[newShapeIndex];
         HUD.Instance.SetShapeSprite(CurrentShapeData.Sprite);
+
+        Debug.Log("NEW INDEX: " + CurrentShapeIndex);
+
+        Player.Instance.NewBodyShape();
     }
 
     void ShapeFinish()
     {
         Debug.Log("SHAPE COMPLETED!");
 
+        Player.Instance.ResetStats();
         Scores += 150;
         HUD.Instance.SetPoints(Scores);
 
@@ -64,7 +71,9 @@ public class GameManager : MonoBehaviour
     public void Error()
     {
         Debug.Log("ERROR!");
-        Scores = Mathf.Clamp(Scores - 50, 0, 99999);
+        Scores -= 50;
+        Scores = Mathf.Clamp(Scores, 0, 99999);
+        HUD.Instance.SetPoints(Scores);
     }
 
     public void OnPlayerChanged(ShapeType playerShapeIndex, int currentPlayerSphere, int currentPlayerCubes, int currentPlayerPiramid)
