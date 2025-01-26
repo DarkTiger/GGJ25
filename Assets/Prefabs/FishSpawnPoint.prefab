@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340fffc8a025db940b579434f4673dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishType: 3
+  FishType: 0
   spawnedFish: {fileID: 0}
   SpawnEffectSystem: {fileID: 7727182449972031055}
   MaxHorizontalPosition: 90
@@ -63,16 +63,28 @@ PrefabInstance:
       value: Spawn Effect
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.372905
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.003363
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalRotation.w
@@ -80,15 +92,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -108,11 +120,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: lengthInSec
-      value: 50
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: TriggerModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 7.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
