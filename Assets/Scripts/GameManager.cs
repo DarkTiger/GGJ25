@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
 
     public ShapeData[] ShapesData;
 
-    public int Scores { get; private set; } = 0;
+    public int Scores { get; set; } = 0;
     
     public static GameManager Instance = null;
     public float GameTime => currentGameTime;
     public ShapeData CurrentShapeData { get; private set; }
     public int CurrentShapeIndex = 0;
+
+    bool gameRunning = true;
 
     [Serializable]
     public struct ShapeData
@@ -43,7 +45,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        currentGameTime -= Time.deltaTime;
+        if (currentGameTime > 0)
+        {
+            currentGameTime -= Time.deltaTime;
+        }
+        else if (gameRunning)
+        {
+            gameRunning = false;
+            GameOver();
+        }
     }
     
     public IEnumerator NewShape()
@@ -60,18 +70,26 @@ public class GameManager : MonoBehaviour
 
     void ShapeFinish()
     {
-        Player.Instance.ResetStats();
+        Player.Instance.ResetBodyStats(3f);
         Scores += 150;
         HUD.Instance.SetPoints(Scores);
+        GetComponent<PlayRandomSound>().PlayAudio(0, 1f);
 
         StartCoroutine(NewShape());
     }
 
     public void Error()
     {
+        GetComponent<PlayRandomSound>().PlayAudio(1, 1f);
         Scores -= 50;
         Scores = Mathf.Clamp(Scores, 0, 99999);
         HUD.Instance.SetPoints(Scores);
+    }
+
+    public void GameOver()
+    {
+        GetComponent<PlayRandomSound>().PlayAudio(2, 1f);
+        HUD.Instance.ActiveGameOver(true);
     }
 
     public void OnPlayerChanged(ShapeType playerShapeIndex, int currentPlayerSphere, int currentPlayerCubes, int currentPlayerPiramid)

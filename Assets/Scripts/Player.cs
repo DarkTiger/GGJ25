@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public int CurrentCubesCount { get; set; } = 0;
     public int CurrentPiramidsCount { get; set; } = 0;
 
-    public static Player Instance = null; 
+    public static Player Instance = null;
 
     float baseMaxSpeed = 1f;
     float currentDashTime = 0f;
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Movement();
-        Dash();  
+        Dash();
     }
 
     void Movement()
@@ -83,6 +83,7 @@ public class Player : MonoBehaviour
     IEnumerator DashCO()
     {
         currentDashCooldown = dashCooldown;
+        GetComponent<PlayRandomSound>().PlayAudio(0, 1f);
 
         while (currentDashTime < dashTime)
         {
@@ -105,18 +106,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ResetStats()
+    public void ResetBodyStats(float delay)
     {
         CurrentSpheresCount = 0;
         CurrentCubesCount = 0;
         CurrentPiramidsCount = 0;
 
-        ResetBodyShapes();
+        ResetBodyShapes(1f);
     }
 
     public void NewBodyShape()
     {
-        ResetBodyShapes();
+        ResetBodyShapes(1f);
 
         StartCoroutine(NewBodyShapeCO());
     }
@@ -127,14 +128,14 @@ public class Player : MonoBehaviour
         shapesParent.GetChild(GameManager.Instance.CurrentShapeIndex).gameObject.SetActive(true);
     }
 
-    public void ResetBodyShapes()
+    public void ResetBodyShapes(float delaySeconds)
     {
-        StartCoroutine(ResetBodyShapesCO());
+        StartCoroutine(ResetBodyShapesCO(delaySeconds));
     }
 
-    IEnumerator ResetBodyShapesCO()
+    IEnumerator ResetBodyShapesCO(float delaySeconds)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(delaySeconds);
 
         for (int i = 0; i < shapesParent.childCount; i++)
         {
@@ -151,6 +152,7 @@ public class Player : MonoBehaviour
 
     public void Respawn()
     {
+        GetComponent<PlayRandomSound>().PlayAudio(1, 1f);
         transform.position = Vector3.zero;
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
@@ -162,29 +164,33 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("ShapeChanger"))
         {
-            if (other.GetComponent<Bonus_ShapeChanger>().ShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType)
+            Bonus_ShapeChanger shapeChanger = other.GetComponent<Bonus_ShapeChanger>();
+
+            if (shapeChanger.ShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType)
             {
                 if (CurrentSpheresCount == 0 && CurrentCubesCount == 0 && CurrentPiramidsCount == 0)
                 {
-                    ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
+                    ChangeShape(shapeChanger.ShapeIndex);
                 }
-                
+
                 GameManager.Instance.Error();
             }
             else
             {
-                ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
+                ChangeShape(shapeChanger.ShapeIndex);
                 GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
             }
 
-            other.GetComponent<Bonus_ShapeChanger>().Disable();
+            shapeChanger.Disable();
+            shapeChanger.GetComponent<PlayRandomSound>().PlayAudio(0,1f);
         }
 
         if (other.CompareTag("Bubble"))
         {
-            ShapeType bubbleType = other.GetComponent<Bubble>().ShapeIndex;
+            Bubble bubble = other.GetComponent<Bubble>();
+            ShapeType bubbleType = bubble.ShapeIndex;
 
-            if (CurrentShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType || 
+            if (CurrentShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType ||
                 (bubbleType == ShapeType.Sphere && CurrentSpheresCount + 1 > GameManager.Instance.CurrentShapeData.SpheresCount ||
                 bubbleType == ShapeType.Cube && CurrentCubesCount + 1 > GameManager.Instance.CurrentShapeData.CubesCount ||
                 bubbleType == ShapeType.Piramid && CurrentPiramidsCount + 1 > GameManager.Instance.CurrentShapeData.PiramidsCount))
@@ -195,7 +201,7 @@ public class Player : MonoBehaviour
             {
                 Transform bodyParts = shapesParent.GetChild(GameManager.Instance.CurrentShapeIndex);
 
-                switch (other.GetComponent<Bubble>().ShapeIndex)
+                switch (bubble.ShapeIndex)
                 {
                     case ShapeType.Sphere:
                         CurrentSpheresCount++;
@@ -235,7 +241,30 @@ public class Player : MonoBehaviour
                 GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
             }
 
-            other.GetComponent<Bubble>().Disable();
+            bubble.Disable();
+            bubble.GetComponent<PlayRandomSound>().PlayAudio(0,1f);
+        }
+
+        var fish = other.GetComponent<Fish>();
+        if (fish)
+        {
+            var hitbox = fish.GetHitBox();
+            if (hitbox == other)
+            {
+                if (CurrentSpheresCount > 0 || CurrentCubesCount > 0 || CurrentPiramidsCount > 0)
+                {
+                    NewBodyShape();
+                }
+                else
+                {
+                    GameManager.Instance.Scores -= 100;
+                    GameManager.Instance.Scores = Mathf.Clamp(GameManager.Instance.Scores, 0, 99999);
+                    HUD.Instance.SetPoints(GameManager.Instance.Scores);
+                }
+
+
+                Respawn();
+            }
         }
     }
 }

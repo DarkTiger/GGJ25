@@ -8,6 +8,7 @@ public class HUD : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtTime = null;
     [SerializeField] TextMeshProUGUI txtPoints = null;
     [SerializeField] Image imgShape = null;
+    [SerializeField] GameObject gameOver = null;
 
     public static HUD Instance = null;
 
@@ -30,5 +31,10 @@ public class HUD : MonoBehaviour
     public void SetPoints(int points)
     {
         txtPoints.text = "Points: " + points;
+    }
+
+    public void ActiveGameOver(bool enable)
+    {
+        gameOver.SetActive(enable);
     }
 }
