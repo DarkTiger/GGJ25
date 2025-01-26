@@ -100,7 +100,7 @@ MonoBehaviour:
   InflationSpeed: 1
   IsInflated: 0
   InitialHitBoxRadius: 0.1
-  Animator: {fileID: 0}
+  Animator: {fileID: 7832153308136180967}
 --- !u!135 &9128423765978893768
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -211,5 +211,10 @@ PrefabInstance:
 --- !u!4 &4202220446821013149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c5d422510f426654cb88d34cb3134759, type: 3}
+  m_PrefabInstance: {fileID: 4457420440022495606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7832153308136180967 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: c5d422510f426654cb88d34cb3134759, type: 3}
   m_PrefabInstance: {fileID: 4457420440022495606}
   m_PrefabAsset: {fileID: 0}
