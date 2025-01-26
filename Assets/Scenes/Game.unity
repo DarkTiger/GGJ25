@@ -15013,6 +15013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble_Sphere (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2383109526412442660, guid: 67d5f7a0354f9b04185ff92ef077274e, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15088,6 +15092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble_Sphere (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2383109526412442660, guid: 67d5f7a0354f9b04185ff92ef077274e, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15107,11 +15115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2057997451125324513, guid: 9292d48870435d1499e8c06a0f2e598c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80
+      value: 65.9
       objectReference: {fileID: 0}
     - target: {fileID: 2057997451125324513, guid: 9292d48870435d1499e8c06a0f2e598c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34.5
+      value: -25.4
       objectReference: {fileID: 0}
     - target: {fileID: 2057997451125324513, guid: 9292d48870435d1499e8c06a0f2e598c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15291,6 +15299,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963596602}
     m_Modifications:
+    - target: {fileID: 3199612039726017607, guid: f75905168b74517408a25c9333910f27, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8459783371733549979, guid: f75905168b74517408a25c9333910f27, type: 3}
       propertyPath: m_LocalScale.y
       value: 149.99998
@@ -15453,6 +15465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: gameTime
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15466,6 +15482,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963596602}
     m_Modifications:
+    - target: {fileID: 638145483172829257, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3617481342326943807, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.8
@@ -15530,15 +15550,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.3
+      value: -60.4
       objectReference: {fileID: 0}
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.9
+      value: -14.8
       objectReference: {fileID: 0}
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15651,6 +15671,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963596602}
     m_Modifications:
+    - target: {fileID: 638145483172829257, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3617481342326943807, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 43.7
@@ -20721,6 +20745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble_Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 2383109526412442660, guid: 67d5f7a0354f9b04185ff92ef077274e, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20734,6 +20762,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963596602}
     m_Modifications:
+    - target: {fileID: 3199612039726017607, guid: f75905168b74517408a25c9333910f27, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8459783371733549979, guid: f75905168b74517408a25c9333910f27, type: 3}
       propertyPath: m_LocalScale.y
       value: 149.99998
@@ -20799,6 +20831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963596602}
     m_Modifications:
+    - target: {fileID: 3199612039726017607, guid: f75905168b74517408a25c9333910f27, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8459783371733549979, guid: f75905168b74517408a25c9333910f27, type: 3}
       propertyPath: m_LocalScale.y
       value: 149.99998
@@ -20929,6 +20965,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 963596602}
     m_Modifications:
+    - target: {fileID: 638145483172829257, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
+      propertyPath: respawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3617481342326943807, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.9
@@ -21001,11 +21041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1603620090828102419, guid: cebc01f6d1e50ae4aab7b513aaec2337, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 1603620090828102419, guid: cebc01f6d1e50ae4aab7b513aaec2337, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.7
+      value: 31.7
       objectReference: {fileID: 0}
     - target: {fileID: 1603620090828102419, guid: cebc01f6d1e50ae4aab7b513aaec2337, type: 3}
       propertyPath: m_LocalPosition.z
