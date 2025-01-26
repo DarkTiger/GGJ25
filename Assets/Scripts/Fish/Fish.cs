@@ -51,6 +51,7 @@ public class Fish : MonoBehaviour
         if (RightMovementIntensity < 0)
         {
             angleY = 180f;
+            angle = -angle;
         }
         transform.rotation = Quaternion.Euler(angleY, 0f, angle * RotationIntensity);
     }

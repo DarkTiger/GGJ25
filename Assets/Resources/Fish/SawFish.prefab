@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72192944c44d97b4596e26cbaaa9b6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 2
   MovementPattern:
     serializedVersion: 2
     m_Curve:
@@ -90,11 +90,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  RightMovementIntensity: 8
-  PatternIntensity: 20
-  PatternDurationTime: 1
+  RightMovementIntensity: -8
+  PatternIntensity: 30
+  PatternDurationTime: 3
   ShouldRotateAlongPath: 1
-  RotationIntensity: 3.5
+  RotationIntensity: 2.5
 --- !u!136 &506306755357887751
 CapsuleCollider:
   m_ObjectHideFlags: 0
