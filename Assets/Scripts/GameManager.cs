@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        GetComponent<AudioSource>().Stop();
         GetComponent<PlayRandomSound>().PlayAudio(2, 1f);
         HUD.Instance.ActiveGameOver();
     }
