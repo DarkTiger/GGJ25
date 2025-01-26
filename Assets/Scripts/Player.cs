@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] float dashTime = 0.25f;
     [SerializeField] float dashCooldown = 5f;
     [SerializeField] Vector2 playerMovementBorder = new Vector2(58.5f, 38.5f);
-    [SerializeField] Transform shapesParent = null; 
+    [SerializeField] Transform shapesParent = null;
+    [SerializeField] ParticleSystem respawnParticles = null;
 
     public ShapeType CurrentShapeIndex { get; private set; } = 0;
     public int CurrentSpheresCount { get; set; } = 0;
@@ -40,6 +41,11 @@ public class Player : MonoBehaviour
 
         baseMaxSpeed = maxSpeed;
         currentDashCooldown = 0f;
+    }
+
+    void Start()
+    {
+        Respawn();
     }
 
     private void Update()
@@ -141,12 +147,22 @@ public class Player : MonoBehaviour
         yield return null;
     }
 
+    public void Respawn()
+    {
+        transform.position = Vector3.zero;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        respawnParticles.transform.position = Vector3.zero;
+        respawnParticles.Play();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ShapeChanger"))
         {
             if (other.GetComponent<Bonus_ShapeChanger>().ShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType)
             {
+                ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
                 GameManager.Instance.Error();
             }
             else
@@ -154,8 +170,8 @@ public class Player : MonoBehaviour
                 ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
                 GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
             }
-                        
-            Destroy(other.gameObject);
+
+            other.GetComponent<Bonus_ShapeChanger>().Disable();
         }
 
         if (other.CompareTag("Bubble"))
@@ -213,7 +229,7 @@ public class Player : MonoBehaviour
                 GameManager.Instance.OnPlayerChanged(CurrentShapeIndex, CurrentSpheresCount, CurrentCubesCount, CurrentPiramidsCount);
             }
 
-            Destroy(other.gameObject);
+            other.GetComponent<Bubble>().Disable();
         }
     }
 }

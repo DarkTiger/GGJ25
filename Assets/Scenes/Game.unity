@@ -15247,15 +15247,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.68747
+      value: 29.3
       objectReference: {fileID: 0}
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.701256
+      value: 19.5
       objectReference: {fileID: 0}
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15310,10 +15310,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 627527739}
-    - target: {fileID: 2332132949040505726, guid: 8c3f687feea9f2f45ab6cc227cc68261, type: 3}
-      propertyPath: cameraDistance
-      value: 130
-      objectReference: {fileID: 0}
     - target: {fileID: 6490655357064975225, guid: 8c3f687feea9f2f45ab6cc227cc68261, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15354,10 +15350,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6656279850420131462, guid: 8c3f687feea9f2f45ab6cc227cc68261, type: 3}
-      propertyPath: m_Antialiasing
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15377,11 +15369,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3617481342326943807, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -51
+      value: -45.2
       objectReference: {fileID: 0}
     - target: {fileID: 3617481342326943807, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3617481342326943807, guid: 1b8b86fe2a717794e8e7880b19a9815d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15600,9 +15592,9 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -20641,6 +20633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShapeChanger_Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 6613108619363280106, guid: cebc01f6d1e50ae4aab7b513aaec2337, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20852,6 +20848,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5379444096019588170, guid: 01c206e93fe5a0e4e96b84ed6b3cb4b0, type: 3}
+      propertyPath: respawnParticles
+      value: 
+      objectReference: {fileID: 1652040033}
     - target: {fileID: 6951572268125330642, guid: 01c206e93fe5a0e4e96b84ed6b3cb4b0, type: 3}
       propertyPath: m_Name
       value: Player
