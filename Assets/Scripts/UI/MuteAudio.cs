@@ -11,6 +11,7 @@ public class MuteAudio : MonoBehaviour
 
     private void Start()
     {
+        btnImage = GetComponent<Image>();
         btnImage.sprite = normal;
     }
 
