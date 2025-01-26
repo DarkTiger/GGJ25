@@ -60,13 +60,18 @@ public class Fish : MonoBehaviour
         initialPosition = transform.position;
         inferredHitbox = GetComponent<Collider>();
         
-        if(transform.position.x < 0)
-        {
-            RightMovementIntensity = -RightMovementIntensity;
-            // rotate the fish to face the right direction
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
-        }
+        // if(transform.position.x < 0)
+        // {
+        //     RightMovementIntensity = -RightMovementIntensity;
+        //     // rotate the fish to face the right direction
+        //     transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+        // }
         
+    }
+
+    public void FlipToLeft()
+    {
+        RightMovementIntensity = -Mathf.Abs(RightMovementIntensity);
     }
 
     // Update is called once per frame
