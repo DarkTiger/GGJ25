@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+
 public enum FishType
 {
     [Prefab("Fish/Swordfish")]
@@ -23,13 +24,19 @@ public enum FishType
     SeaUrchin
 }
 
-
+public enum FishHorizontalDirection
+{
+    Left,
+    Right
+}
 
 
 
 public class FishSpawnPoint : MonoBehaviour
 {
     public FishType FishType;
+    public FishHorizontalDirection HorizontalDirection;
+
     public GameObject spawnedFish;
 
     public ParticleSystem SpawnEffectSystem;
@@ -56,7 +63,15 @@ public class FishSpawnPoint : MonoBehaviour
         }
 
         spawnedFish = Instantiate(fishPrefab, transform.position, Quaternion.identity);
+        // if position is negative, flip the fish to face left
+        HorizontalDirection = transform.position.x < 0 ? FishHorizontalDirection.Right : FishHorizontalDirection.Left;
+        if (HorizontalDirection == FishHorizontalDirection.Left)
+        {
+            spawnedFish.transform.localScale = new Vector3(-1, 1, 1);
+            spawnedFish.GetComponentInChildren<Fish>().FlipToLeft();
+        }
         spawnedFish.transform.SetParent(transform);
+        SpawnEffectSystem.Play();
     }
 
     public GameObject GetFishPrefab()
@@ -86,6 +101,10 @@ public class FishSpawnPoint : MonoBehaviour
 
         if (spawnedFish.transform.position.x < -MaxHorizontalPosition || spawnedFish.transform.position.x > MaxHorizontalPosition)
         {
+            if (spawnedFish.activeSelf == false)
+            {
+                return;
+            }
             // deactivate the fish if it goes out of bounds
             spawnedFish.SetActive(false);
             // move the fish back to the spawn point
