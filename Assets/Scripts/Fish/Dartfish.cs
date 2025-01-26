@@ -19,6 +19,7 @@ public class Dartfish : Fish
     private bool isCharging = false;
     private bool isAiming = false;
     private GameObject aimedPlayer;
+    private Animator animator;
 
     protected override void Update()
     {
@@ -38,13 +39,13 @@ public class Dartfish : Fish
             {
                 // Player is on the left side
                 transform.eulerAngles = new Vector3(0f, 180f, -angleTowardPlayer);
-                Debug.Log("Aiming left: " + transform.eulerAngles);
+                //Debug.Log("Aiming left: " + transform.eulerAngles);
             }
             else
             {
                 // Player is on the right side
                 transform.eulerAngles = new Vector3(0f, 0f, angleTowardPlayer);
-                Debug.Log("Aiming right: " + transform.eulerAngles);
+                //Debug.Log("Aiming right: " + transform.eulerAngles);
             }
 
 
@@ -53,6 +54,11 @@ public class Dartfish : Fish
                 isAiming = false;
                 isCharging = true;
                 ChargeTime = ChargeDuration;
+                if (animator == null)
+                {
+                    animator = GetComponentInChildren<Animator>();
+                }
+                animator.SetBool("isAttacking", true);
 
                 targetPosition = aimedPlayer.transform.position;
                 targetDirection = (targetPosition - transform.position).normalized;
@@ -64,6 +70,11 @@ public class Dartfish : Fish
             if (ChargeTime <= 0)
             {
                 isCharging = false;
+                if (animator == null)
+                {
+                    animator = GetComponentInChildren<Animator>();
+                }
+                animator.SetBool("isAttacking", false);
             }
 
             // move towards the player, but don't stop charging until a timer runs out
