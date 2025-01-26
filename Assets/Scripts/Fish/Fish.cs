@@ -75,6 +75,11 @@ public class Fish : MonoBehaviour
         RightMovementIntensity = -Mathf.Abs(RightMovementIntensity);
     }
 
+    public void FlipToRight()
+    {
+        RightMovementIntensity = Mathf.Abs(RightMovementIntensity);
+    }
+
     // Update is called once per frame
     protected virtual void Update()
     {
