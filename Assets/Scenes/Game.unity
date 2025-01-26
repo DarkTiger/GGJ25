@@ -207,18 +207,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2335191402968457807, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
-      propertyPath: gameOver
-      value: 
-      objectReference: {fileID: 79787244}
-    - target: {fileID: 3019029948144375985, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5022926283375920033, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5432389948576470630, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -228,11 +216,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
---- !u!1 &79787244 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3019029948144375985, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
-  m_PrefabInstance: {fileID: 79787243}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &130687014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 54962990281905668, guid: 67d5f7a0354f9b04185ff92ef077274e, type: 3}

@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         GetComponent<PlayRandomSound>().PlayAudio(2, 1f);
-        HUD.Instance.ActiveGameOver(true);
+        HUD.Instance.ActiveGameOver();
     }
 
     public void OnPlayerChanged(ShapeType playerShapeIndex, int currentPlayerSphere, int currentPlayerCubes, int currentPlayerPiramid)

@@ -24,6 +24,7 @@ public class Dartfish : Fish
     protected override void Update()
     {
 
+        // if the fish is hidden they should reset their status
         if (isAiming)
         {
             AimTime -= Time.deltaTime;
@@ -38,7 +39,7 @@ public class Dartfish : Fish
             if (aimedPlayer.transform.position.x < transform.position.x)
             {
                 // Player is on the left side
-                transform.eulerAngles = new Vector3(0f, 180f, -angleTowardPlayer);
+                transform.eulerAngles = new Vector3(180f, 0f, -angleTowardPlayer);
                 //Debug.Log("Aiming left: " + transform.eulerAngles);
             }
             else

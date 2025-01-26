@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using System;
 using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class HUD : MonoBehaviour
     [SerializeField] TextMeshProUGUI txtPoints = null;
     [SerializeField] Image imgShape = null;
     [SerializeField] GameObject gameOver = null;
+    [SerializeField] GameObject result = null;
+    [SerializeField] TextMeshProUGUI resultScore = null;
 
     public static HUD Instance = null;
 
@@ -33,8 +37,24 @@ public class HUD : MonoBehaviour
         txtPoints.text = "Points: " + points;
     }
 
-    public void ActiveGameOver(bool enable)
+    public void ActiveGameOver()
     {
-        gameOver.SetActive(enable);
+        StartCoroutine(GameOverCO());
+    }
+
+    IEnumerator GameOverCO()
+    {
+        gameOver.SetActive(true);
+
+        yield return new WaitForSeconds(5f);
+
+        gameOver.SetActive(false);
+        result.SetActive(true);
+
+        resultScore.text = "SCORES: " + GameManager.Instance.Scores;
+
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene(0);
     }
 }
