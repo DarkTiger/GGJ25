@@ -106,6 +106,11 @@ public class Dartfish : Fish
         }
     }
 
+    public override Collider GetHitBox()
+    {
+        return HitBox;
+    }
+
 
 
 }

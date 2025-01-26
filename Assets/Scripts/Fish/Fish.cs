@@ -20,6 +20,8 @@ public class Fish : MonoBehaviour
     private float currentLifetime = 0f;
     private Vector3 initialPosition = Vector3.zero;
 
+    private Collider inferredHitbox;
+
 
     protected virtual void Move() {
         float patternTime = currentLifetime % PatternDurationTime;
@@ -56,6 +58,7 @@ public class Fish : MonoBehaviour
     void Start()
     {
         initialPosition = transform.position;
+        inferredHitbox = GetComponent<Collider>();
         
         if(transform.position.x < 0)
         {
@@ -73,5 +76,31 @@ public class Fish : MonoBehaviour
         RotateAlongPath();
     
         currentLifetime += Time.deltaTime;
+    }
+
+    /// <summary>
+    /// Returns the hitbox of the fish.
+    /// The player should do this check to understand if the fish is hitting it:
+    /// 
+    /// onTriggerEnter(Collider other) {
+    ///    var fish = other.GetComponent<Fish>();
+    ///    if (fish == null) {
+    ///    return;
+    ///    }
+    ///    var hitbox = fish.GetHitBox();
+    ///    if (hitbox == other) {
+    ///    // the player was hit by the fish
+    ///    }
+    /// </summary>
+    /// <returns></returns>
+    public virtual Collider GetHitBox()
+    {
+        if (inferredHitbox == null)
+        {
+            inferredHitbox = GetComponent<Collider>();
+        }
+
+        return inferredHitbox;
+
     }
 }

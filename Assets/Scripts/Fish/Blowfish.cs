@@ -76,7 +76,10 @@ public class Blowfish : Fish
         Animator.SetBool("isInflated", true);
     }
 
-
+    public override Collider GetHitBox()
+    {
+        return HitBox;
+    }
 
 
     void OnTriggerEnter(Collider other)
