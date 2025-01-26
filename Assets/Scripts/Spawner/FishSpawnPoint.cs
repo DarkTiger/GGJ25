@@ -67,7 +67,6 @@ public class FishSpawnPoint : MonoBehaviour
         HorizontalDirection = transform.position.x < 0 ? FishHorizontalDirection.Right : FishHorizontalDirection.Left;
         if (HorizontalDirection == FishHorizontalDirection.Left)
         {
-            spawnedFish.transform.localScale = new Vector3(-1, 1, 1);
             spawnedFish.GetComponentInChildren<Fish>().FlipToLeft();
         }
         spawnedFish.transform.SetParent(transform);
