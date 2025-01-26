@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishType: 0
+  HorizontalDirection: 0
   spawnedFish: {fileID: 0}
   SpawnEffectSystem: {fileID: 7727182449972031055}
   MaxHorizontalPosition: 90
@@ -61,6 +62,26 @@ PrefabInstance:
     - target: {fileID: 936501581203547528, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_Name
       value: Spawn Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641923562806846107, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: simulationSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641923562806846107, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.47843137
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641923562806846107, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.9576185
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641923562806846107, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8132075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641923562806846107, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalScale.x
@@ -113,6 +134,10 @@ PrefabInstance:
     - target: {fileID: 5430929195266497514, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658299380059414555, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
+      propertyPath: m_Name
+      value: LightEffect
       objectReference: {fileID: 0}
     - target: {fileID: 6402587608281933815, guid: 3f8004932e6705e428b1cd0f27c53542, type: 3}
       propertyPath: stopAction
