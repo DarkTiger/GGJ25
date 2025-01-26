@@ -123,7 +123,7 @@ public class Player : MonoBehaviour
 
     IEnumerator NewBodyShapeCO()
     {
-        yield return null;
+        yield return new WaitForSeconds(3f);
         shapesParent.GetChild(GameManager.Instance.CurrentShapeIndex).gameObject.SetActive(true);
     }
 
@@ -134,6 +134,8 @@ public class Player : MonoBehaviour
 
     IEnumerator ResetBodyShapesCO()
     {
+        yield return new WaitForSeconds(1f);
+
         for (int i = 0; i < shapesParent.childCount; i++)
         {
             for (int j = 0; j < shapesParent.GetChild(i).childCount; j++)
@@ -162,7 +164,11 @@ public class Player : MonoBehaviour
         {
             if (other.GetComponent<Bonus_ShapeChanger>().ShapeIndex != GameManager.Instance.CurrentShapeData.PlayerShapeType)
             {
-                ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
+                if (CurrentSpheresCount == 0 && CurrentCubesCount == 0 && CurrentPiramidsCount == 0)
+                {
+                    ChangeShape(other.GetComponent<Bonus_ShapeChanger>().ShapeIndex);
+                }
+                
                 GameManager.Instance.Error();
             }
             else
