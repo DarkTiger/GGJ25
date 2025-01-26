@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7445298688328394743}
   - component: {fileID: 7147803645406816583}
   - component: {fileID: 506306755357887751}
+  - component: {fileID: -4289350651943328011}
   m_Layer: 0
   m_Name: SawFish
   m_TagString: Untagged
@@ -117,6 +118,26 @@ CapsuleCollider:
   m_Height: 7.86
   m_Direction: 0
   m_Center: {x: 0.61, y: 0, z: 0}
+--- !u!114 &-4289350651943328011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350744607994081944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9148fefdfab876b42acc8be7cc9ca0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips1:
+  - {fileID: 8300000, guid: 1327e6060de46184c9f65dd5d910b4c0, type: 3}
+  - {fileID: 8300000, guid: 83c5c6ef980056145a4d713a74d797f5, type: 3}
+  - {fileID: 8300000, guid: 1b8cb0a367b2fe34290456aca626cccd, type: 3}
+  - {fileID: 8300000, guid: 068d658fcba6a724db3c288058ca426e, type: 3}
+  - {fileID: 8300000, guid: a31e38e54e766f24e9616d9c1316eab3, type: 3}
+  clips2: []
+  clips3: []
 --- !u!1001 &7483780758231727505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,6 +149,18 @@ PrefabInstance:
     - target: {fileID: 3377641113379756423, guid: c24fc41e00d324e4e9583ead28bc77b2, type: 3}
       propertyPath: m_Name
       value: SK_FishSega 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636761434536234010, guid: c24fc41e00d324e4e9583ead28bc77b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636761434536234010, guid: c24fc41e00d324e4e9583ead28bc77b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7636761434536234010, guid: c24fc41e00d324e4e9583ead28bc77b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7636761434536234010, guid: c24fc41e00d324e4e9583ead28bc77b2, type: 3}
       propertyPath: m_LocalPosition.x

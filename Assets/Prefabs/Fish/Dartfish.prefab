@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7651857488977963980}
   - component: {fileID: 686509037217099533}
   - component: {fileID: 2480272420039367194}
+  - component: {fileID: -3740328588036120292}
   m_Layer: 0
   m_Name: Dartfish
   m_TagString: Untagged
@@ -126,6 +127,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 32
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3740328588036120292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134125458263290932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9148fefdfab876b42acc8be7cc9ca0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips1:
+  - {fileID: 8300000, guid: ec4c21a094868a44db06d93ee2a1ce79, type: 3}
+  - {fileID: 8300000, guid: b06aabb0f7fffdf458a5648b16a35f68, type: 3}
+  - {fileID: 8300000, guid: 58a9cfc292f8423408b4a16c9e87c1ad, type: 3}
+  - {fileID: 8300000, guid: 1d9d1e6ce2b380946b985c91695af154, type: 3}
+  - {fileID: 8300000, guid: a923f6eb98c706c4b8bffca0e9e796e4, type: 3}
+  clips2:
+  - {fileID: 8300000, guid: e500a0fe67273f049889144094ec8723, type: 3}
+  - {fileID: 8300000, guid: 7e5fad579da6c454b984612393b870df, type: 3}
+  clips3: []
 --- !u!1001 &4973450063455264486
 PrefabInstance:
   m_ObjectHideFlags: 0

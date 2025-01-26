@@ -74,6 +74,8 @@ public class Blowfish : Fish
         DangerZone.enabled = true;
 
         Animator.SetBool("isInflated", true);
+
+        GetComponent<PlayRandomSound>().PlayAudio(0, 1f);
     }
 
     public override Collider GetHitBox()

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3159814863581377969}
   - component: {fileID: 2964629074939912080}
   - component: {fileID: 2858726277739835693}
+  - component: {fileID: 7519384412682373665}
   m_Layer: 0
   m_Name: Hammerfish
   m_TagString: Untagged
@@ -117,6 +118,27 @@ CapsuleCollider:
   m_Height: 10
   m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7519384412682373665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264816538927397132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9148fefdfab876b42acc8be7cc9ca0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips1:
+  - {fileID: 8300000, guid: 380bab3641292de49b08624d170468d5, type: 3}
+  - {fileID: 8300000, guid: 77008a56a94d25744aa368cfee1771bd, type: 3}
+  - {fileID: 8300000, guid: a26d2f39bfbc3a445a90bcfe1148efd7, type: 3}
+  - {fileID: 8300000, guid: a524f133af4b1b9438ccfdf25699adc2, type: 3}
+  - {fileID: 8300000, guid: bcf40f57ed762c7479ad66e4dc259269, type: 3}
+  - {fileID: 8300000, guid: f3bfbdce482538041b97248bfbd96b0f, type: 3}
+  clips2: []
+  clips3: []
 --- !u!1001 &7577135675954986506
 PrefabInstance:
   m_ObjectHideFlags: 0

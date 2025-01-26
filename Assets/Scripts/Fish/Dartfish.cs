@@ -60,6 +60,8 @@ public class Dartfish : Fish
                 }
                 animator.SetBool("isAttacking", true);
 
+                GetComponent<PlayRandomSound>().PlayAudio(1, 1f);
+
                 targetPosition = aimedPlayer.transform.position;
                 targetDirection = (targetPosition - transform.position).normalized;
             }
@@ -99,6 +101,7 @@ public class Dartfish : Fish
         isAiming = true;
         AimTime = AimDuration;
 
+        GetComponent<PlayRandomSound>().PlayAudio(0, 1f);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8262283945593214814}
   - component: {fileID: 9128423765978893768}
   - component: {fileID: 3193864827511086561}
+  - component: {fileID: 5290206672831879326}
   m_Layer: 0
   m_Name: Blowfish
   m_TagString: Untagged
@@ -143,6 +144,27 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: -0.2, z: 0}
+--- !u!114 &5290206672831879326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978859576475959722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9148fefdfab876b42acc8be7cc9ca0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips1:
+  - {fileID: 8300000, guid: 53aac785caf80b4478ad892c59a6b508, type: 3}
+  - {fileID: 8300000, guid: 3e51a659b4d7f3e47960183926091aea, type: 3}
+  - {fileID: 8300000, guid: 86f19d70b9d5b004a974ad9a3037cd9e, type: 3}
+  - {fileID: 8300000, guid: 6ec752596a24c2747b7b1df81d09ca44, type: 3}
+  - {fileID: 8300000, guid: 7b28f62243f386844b095ba53870254e, type: 3}
+  - {fileID: 8300000, guid: 40d07494bcf8dc84f93cc06f8ec087d6, type: 3}
+  clips2: []
+  clips3: []
 --- !u!1001 &4457420440022495606
 PrefabInstance:
   m_ObjectHideFlags: 0
