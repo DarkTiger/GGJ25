@@ -7731,6 +7731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db7465940f09ceb42988401cf4a13c5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Intro: {fileID: 299635120}
+  MainMenu: {fileID: 1698256119}
   Tutorial: {fileID: 1736317656}
   Credits: {fileID: 1040002075}
 --- !u!1 &1922171725

@@ -5252,108 +5252,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!1 &447891920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4121933224634404511, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-  m_PrefabInstance: {fileID: 1165349246}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &447891924
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 447891920}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2d498358cbbf9dd45b2ad24b9c482cfa, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2d498358cbbf9dd45b2ad24b9c482cfa, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.25
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &449776614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
@@ -15671,37 +15569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      propertyPath: ShapesData.Array.data[0].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: de3f78838eaa0eb47bfe20e0e5832154, type: 3}
-    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      propertyPath: ShapesData.Array.data[1].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c4fa4e56f404e684f9b79cf615ff57e9, type: 3}
-    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      propertyPath: ShapesData.Array.data[2].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 797b088ce35a9e94787187295c1c0c64, type: 3}
-    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      propertyPath: ShapesData.Array.data[3].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e8dd58a9240c0834b80c6a04b6bdb4aa, type: 3}
-    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      propertyPath: ShapesData.Array.data[4].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 034265a7bae618a4887637c3dd838bc0, type: 3}
-    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      propertyPath: ShapesData.Array.data[5].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3cab4108ce0b34840baad10dbf0079fc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4121933224634404511, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 447891924}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
 --- !u!1001 &1213259625
 PrefabInstance:
@@ -21791,6 +21662,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5379444096019588170, guid: 01c206e93fe5a0e4e96b84ed6b3cb4b0, type: 3}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379444096019588170, guid: 01c206e93fe5a0e4e96b84ed6b3cb4b0, type: 3}
+      propertyPath: maxSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5379444096019588170, guid: 01c206e93fe5a0e4e96b84ed6b3cb4b0, type: 3}
       propertyPath: respawnParticles
       value: 
