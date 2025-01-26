@@ -207,9 +207,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1386963608397401407, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956499054598208579, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5432389948576470630, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491424375875442934, guid: f906b62fc0e99244a908996c0864eb46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5240,6 +5252,108 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &447891920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4121933224634404511, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+  m_PrefabInstance: {fileID: 1165349246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &447891924
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447891920}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d498358cbbf9dd45b2ad24b9c482cfa, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2d498358cbbf9dd45b2ad24b9c482cfa, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &449776614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2340729413759352668, guid: 97e9d7b30f421954a9b5f2413016fc42, type: 3}
@@ -15079,6 +15193,10 @@ PrefabInstance:
       propertyPath: FishType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
+      propertyPath: MaxHorizontalPosition
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6424956381747746099, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: m_Name
       value: FishSpawnPoint (1)
@@ -15580,7 +15698,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4121933224634404511, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 447891924}
   m_SourcePrefab: {fileID: 100100000, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
 --- !u!1001 &1213259625
 PrefabInstance:
@@ -15695,6 +15816,10 @@ PrefabInstance:
       propertyPath: FishType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
+      propertyPath: MaxHorizontalPosition
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6424956381747746099, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: m_Name
       value: FishSpawnPoint (4)
@@ -15760,6 +15885,10 @@ PrefabInstance:
     - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: FishType
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
+      propertyPath: MaxHorizontalPosition
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6424956381747746099, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: m_Name
@@ -16128,7 +16257,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1652040031}
   serializedVersion: 8
   lengthInSec: 50
-  simulationSpeed: 4
+  simulationSpeed: 6
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -17062,11 +17191,11 @@ ParticleSystem:
     m_BurstCount: 1
     m_Bursts:
     - serializedVersion: 2
-      time: 1
+      time: 0
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 25
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -21174,6 +21303,10 @@ PrefabInstance:
       propertyPath: FishType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
+      propertyPath: MaxHorizontalPosition
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6424956381747746099, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: m_Name
       value: FishSpawnPoint (2)
@@ -21438,6 +21571,10 @@ PrefabInstance:
     - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: HorizontalDirection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300082767037999542, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
+      propertyPath: MaxHorizontalPosition
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6424956381747746099, guid: fd3b2c615741c4844b0b6857fb95f9b5, type: 3}
       propertyPath: m_Name
