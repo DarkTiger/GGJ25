@@ -19,7 +19,7 @@ public class HUD : MonoBehaviour
     private void Update()
     {
         TimeSpan timeSpam = TimeSpan.FromSeconds(GameManager.Instance.GameTime);
-        txtTime.text = timeSpam.Minutes.ToString("00") + ":" + timeSpam.Seconds.ToString("00");
+        txtTime.text = Mathf.Clamp(timeSpam.Minutes, 0, 60).ToString("00") + ":" + Mathf.Clamp(timeSpam.Seconds, 0, 60).ToString("00");
     }
 
     public void SetShapeSprite(Sprite sprite)
