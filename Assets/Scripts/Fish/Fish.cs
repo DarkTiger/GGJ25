@@ -38,14 +38,31 @@ public class Fish : MonoBehaviour
 /// </summary>
     void RotateAlongPath()
     {
+        if (!ShouldRotateAlongPath)
+        {
+            return;
+        }
+        
         Vector3 direction = (transform.position - initialPosition).normalized;
+        float angleY = 0f;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle * RotationIntensity);
+        if (RightMovementIntensity < 0)
+        {
+            angleY = 180f;
+        }
+        transform.rotation = Quaternion.Euler(0f, angleY, angle * RotationIntensity);
     }
 
     void Start()
     {
         initialPosition = transform.position;
+        
+        if(transform.position.x < 0)
+        {
+            RightMovementIntensity = -RightMovementIntensity;
+            // rotate the fish to face the right direction
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+        }
         
     }
 
@@ -53,9 +70,8 @@ public class Fish : MonoBehaviour
     protected virtual void Update()
     {
         Move();
-        if (ShouldRotateAlongPath){
-            RotateAlongPath();
-        }
+        RotateAlongPath();
+    
         currentLifetime += Time.deltaTime;
     }
 }
