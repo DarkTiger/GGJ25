@@ -142,15 +142,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 99:99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0ad66046bc8ae1442bfc2db286b45e71, type: 2}
+  m_sharedMaterial: {fileID: -3116417271268888295, guid: 0ad66046bc8ae1442bfc2db286b45e71, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4281218885
+  m_fontColor: {r: 0.27058825, g: 0.21511725, b: 0.18039216, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1378,6 +1378,7 @@ MonoBehaviour:
   txtTime: {fileID: 1327806311813784384}
   txtPoints: {fileID: 6943187920052771886}
   imgShape: {fileID: 5061958796784961459}
+  gameOver: {fileID: 3019029948144375985}
 --- !u!1 &6197904771254147720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,15 +1732,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Points: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0ad66046bc8ae1442bfc2db286b45e71, type: 2}
+  m_sharedMaterial: {fileID: -3116417271268888295, guid: 0ad66046bc8ae1442bfc2db286b45e71, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4281478468
+  m_fontColor: {r: 0.2679245, g: 0.17743677, b: 0.19723096, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
