@@ -68,6 +68,8 @@ public class FishSpawnPoint : MonoBehaviour
         if (HorizontalDirection == FishHorizontalDirection.Left)
         {
             spawnedFish.GetComponentInChildren<Fish>().FlipToLeft();
+        } else {
+            spawnedFish.GetComponentInChildren<Fish>().FlipToRight();
         }
         spawnedFish.transform.SetParent(transform);
         SpawnEffectSystem.Play();
