@@ -542,6 +542,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6589652270658232946}
+        m_TargetAssemblyTypeName: PlaySound, Assembly-CSharp
+        m_MethodName: OnPlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5125992243968799836}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: OnChangeScene
@@ -566,8 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2eca9a72f08c9b4d8943c00a12f9662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 0}
-  volume: 44
+  audioClip: {fileID: 8300000, guid: 18ba92448929e6940a5859f276847b99, type: 3}
+  volume: 1
 --- !u!114 &5125992243968799836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,11 +628,11 @@ RectTransform:
   - {fileID: 669602881030108684}
   m_Father: {fileID: 980243417265727790}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -79, y: -134}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &8553966910778579881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -649,8 +661,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 686fe3e45b4d0c841828d9deff8b7d55, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -727,8 +739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931611247e67eaa4da196c9e7dafb9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 21300000, guid: 44168d73ee2f5b740bb606ed100f32c3, type: 3}
-  muted: {fileID: 0}
+  normal: {fileID: 21300000, guid: 686fe3e45b4d0c841828d9deff8b7d55, type: 3}
+  muted: {fileID: 21300000, guid: f087ddeffbece2543a573e89ecab317f, type: 3}
 --- !u!1 &5432389948576470630
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &669602881030108684
 RectTransform:
   m_ObjectHideFlags: 0
