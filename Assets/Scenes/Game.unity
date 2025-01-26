@@ -15553,6 +15553,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: ShapesData.Array.data[0].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: de3f78838eaa0eb47bfe20e0e5832154, type: 3}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: ShapesData.Array.data[1].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4fa4e56f404e684f9b79cf615ff57e9, type: 3}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: ShapesData.Array.data[2].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 797b088ce35a9e94787187295c1c0c64, type: 3}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: ShapesData.Array.data[3].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8dd58a9240c0834b80c6a04b6bdb4aa, type: 3}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: ShapesData.Array.data[4].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 034265a7bae618a4887637c3dd838bc0, type: 3}
+    - target: {fileID: 8700478157544760695, guid: e63f2f48f309cbc46973830ad75732b5, type: 3}
+      propertyPath: ShapesData.Array.data[5].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3cab4108ce0b34840baad10dbf0079fc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

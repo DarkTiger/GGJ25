@@ -90,9 +90,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  RightMovementIntensity: 8
-  PatternIntensity: 20
-  PatternDurationTime: 1.5
+  RightMovementIntensity: -8
+  PatternIntensity: 30
+  PatternDurationTime: 5
   ShouldRotateAlongPath: 1
   RotationIntensity: 1
 --- !u!136 &2858726277739835693
