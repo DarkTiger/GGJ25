@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Scores = 0;
-        NewShape();
+        StartCoroutine(NewShape());
     }
 
     private void Update()
@@ -45,32 +46,29 @@ public class GameManager : MonoBehaviour
         currentGameTime -= Time.deltaTime;
     }
     
-    public void NewShape()
+    public IEnumerator NewShape()
     {
+        yield return new WaitForSeconds(1f);
+
         int newShapeIndex = Random.Range(0, ShapesData.Length);
         CurrentShapeIndex = newShapeIndex;
         CurrentShapeData = ShapesData[newShapeIndex];
         HUD.Instance.SetShapeSprite(CurrentShapeData.Sprite);
-
-        Debug.Log("NEW INDEX: " + CurrentShapeIndex);
 
         Player.Instance.NewBodyShape();
     }
 
     void ShapeFinish()
     {
-        Debug.Log("SHAPE COMPLETED!");
-
         Player.Instance.ResetStats();
         Scores += 150;
         HUD.Instance.SetPoints(Scores);
 
-        NewShape();
+        StartCoroutine(NewShape());
     }
 
     public void Error()
     {
-        Debug.Log("ERROR!");
         Scores -= 50;
         Scores = Mathf.Clamp(Scores, 0, 99999);
         HUD.Instance.SetPoints(Scores);
@@ -78,8 +76,6 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerChanged(ShapeType playerShapeIndex, int currentPlayerSphere, int currentPlayerCubes, int currentPlayerPiramid)
     {
-        Debug.Log(playerShapeIndex.ToString() + " sphere: " + currentPlayerSphere + " cube: " + currentPlayerCubes + " piramid: " + currentPlayerPiramid);
-
         if (CurrentShapeData.PlayerShapeType == playerShapeIndex &&
             CurrentShapeData.SpheresCount == currentPlayerSphere &&
             CurrentShapeData.CubesCount == currentPlayerCubes &&
